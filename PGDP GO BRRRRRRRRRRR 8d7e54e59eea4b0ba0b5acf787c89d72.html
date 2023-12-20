@@ -1,0 +1,944 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PGDP GO BRRRRRRRRRRR</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8d7e54e5-9eea-4b0b-a0b5-acf787c89d72" class="page sans"><header><h1 class="page-title">PGDP GO BRRRRRRRRRRR</h1><p class="page-description"></p></header><div class="page-body"><p id="bb540053-2376-46b5-899d-05945649b3fc" class="">A collection of the most used recursion implementations &amp; some brief explanations of principles related to classes / objects</p><p id="aedc70d8-a99d-4735-b624-0f1b2d0e19b9" class="">
+</p><p id="740a0abb-2f49-4908-b16e-7490c5fe0af6" class="">by @7moodev @</p><ul id="77c738eb-b344-46b0-93fb-6a632733b0c3" class="toggle"><li><details open=""><summary>Recursion</summary><ul id="4c820527-3506-45b1-ab0a-2acc3eb1c4aa" class="toggle"><li><details open=""><summary>Recursion - Mix</summary><ul id="86a9467a-62b3-4c26-bc7d-48df9aacc975" class="toggle"><li><details open=""><summary>GGT / Greatest-Common-Factor </summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="310fed95-36f2-4d87-aa09-dcfdf61019bc" class="code"><code class="language-Java">static int findGCD(int a, int b) {
+        if (b == 0) {
+            return a;
+        } else {
+            // Subtract the smaller number from the larger number
+            if (a &gt; b) {
+                return findGCD(a - b, b);
+            } else {
+                return findGCD(a, b - a);
+            }
+        }
+    }</code></pre><p id="99c71ed0-8d67-4451-8f5c-003c70b8c877" class="">with modulo %</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a89d33d7-d790-435c-9684-b87f3219482a" class="code"><code class="language-Java">static int findGCD(int a, int b) {
+        if (b == 0) {
+            return a;
+        } else {
+            return findGCD(b, a % b);
+        }
+    }</code></pre><p id="3162a650-e359-46d3-9fbe-266cc9b49c8d" class="">
+</p></details></li></ul><ul id="feb83726-c49c-423a-99ca-8b378c6cfa96" class="toggle"><li><details open=""><summary>Reverse a String</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="00fa5664-2ac0-44fc-8475-f729a8fd6251" class="code"><code class="language-Java">static String reverseString(String input){
+        if(input ==&quot;&quot;){
+            return &quot;&quot;;
+        }
+        return reverseString(input.substring(1)) + input.charAt(0);
+    }</code></pre></details></li></ul><ul id="933c4cc7-3337-4dab-99e5-dc7713806dc6" class="toggle"><li><details open=""><summary>Palindrome</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8cf9e798-936a-4c3a-a9b7-f61807369669" class="code"><code class="language-Java">static boolean isPalindrome(String input){
+        if (input.length()==0 || input.length() ==1){
+            return true;
+        }
+        else if(input.charAt(0) == input.charAt(input.length()-1)){
+            return isPalindrome(input.substring(1, input.length()-1));
+        }
+        return false;
+    }</code></pre></details></li></ul><ul id="fe38c425-57f9-4239-b130-093c72779c03" class="toggle"><li><details open=""><summary>Decimal to Binary</summary><p id="0d73355f-b7a1-4d4a-9a9d-a3ecc44e10c0" class="">String as Return value</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0a15bf57-7a51-46dd-88a9-9547771a698b" class="code"><code class="language-Java">static String decimalToBinaryString(int decimal) {
+        if (decimal == 0) {
+            return &quot;0&quot;;
+        } else if (decimal == 1) {
+            return &quot;1&quot;;
+        } else {
+            // Recursive call to convert the quotient to binary, then append the remainder
+            return decimalToBinaryString(decimal / 2) + (decimal % 2);
+        }
+    }</code></pre><p id="5bd25f2e-e4ff-47d8-96dc-153e01434e69" class="">Integer as Return value</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="df90237e-d899-454e-807a-cf658e348f0c" class="code"><code class="language-Java">static int decimalToBinaryInt(int decimal) {
+        if (decimal == 0) {
+            return 0;
+        } else {
+            // Recursive call to convert the quotient to binary, then append the remainder
+            return decimalToBinaryInt(decimal / 2) * 10 + (decimal % 2);
+        }
+    }</code></pre></details></li></ul><ul id="9467bcf4-1777-4376-af46-254ee65e91b0" class="toggle"><li><details open=""><summary>Sum of non-negative numbers up to n</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="232fed8c-c9b7-43bf-9f71-f592d60585a6" class="code"><code class="language-Java">static int sum(int n){
+		if (n==0){
+				return 0;}
+		return n + sum(n-1);
+}</code></pre></details></li></ul><ul id="f15a9219-d649-4f34-835f-b6fbcf68555f" class="toggle"><li><details open=""><summary>Unique paths in a grid</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3488afd3-e6f5-41c9-97a3-e9119c6cf2c9" class="code"><code class="language-Java">public static int grid_path(int n, int m){
+		if (n==1 || m== 1){
+				return 1;}
+		return grid_path(n,m-1) + grid_path(n-1,m);
+}</code></pre><figure id="4cc89bf2-fc0f-491d-af90-fe6d2161c5fb" class="image"><a href="PGDP%20GO%20BRRRRRRRRRRR%208d7e54e59eea4b0ba0b5acf787c89d72/Screenshot_2023-11-25_at_12.52.56.png"><img style="width:672px" src="PGDP%20GO%20BRRRRRRRRRRR%208d7e54e59eea4b0ba0b5acf787c89d72/Screenshot_2023-11-25_at_12.52.56.png"/></a></figure></details></li></ul><ul id="c0e83902-f331-4a6c-8f8c-8c8708dc8a0e" class="toggle"><li><details open=""><summary>Count number of partitions</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="507b222d-e4f8-448e-8265-75aee635dfa3" class="code"><code class="language-Java">public static int count_partitions(int n,int m){
+        if(n==0){
+            return 1;
+        }
+        else if (m==0 || n&lt;0){
+            return 0;
+        }
+        else{
+            return count_partitions(n-m, m) + count_partitions(n, m-1);
+        }
+
+    }</code></pre><figure id="37bcdc4f-f485-4d95-84d5-51adcdd956f8" class="image"><a href="PGDP%20GO%20BRRRRRRRRRRR%208d7e54e59eea4b0ba0b5acf787c89d72/Screenshot_2023-12-09_at_00.29.36.png"><img style="width:624px" src="PGDP%20GO%20BRRRRRRRRRRR%208d7e54e59eea4b0ba0b5acf787c89d72/Screenshot_2023-12-09_at_00.29.36.png"/></a></figure></details></li></ul></details></li></ul><ul id="efd465f8-f5ae-44ba-9988-917e835b1a7f" class="toggle"><li><details open=""><summary>Recursion - Arrays / Lists</summary><ul id="a0bd2647-f8c2-4268-a7b2-b6e90af1a4a5" class="toggle"><li><details open=""><summary>Check if an array is sorted</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8df5f59c-57e3-433b-974e-186e0a73b2c9" class="code"><code class="language-Java">static boolean isSorted(int[]a, int i){
+        if (i == a.length-1){
+            return true;
+        }
+        if (a[i]&lt; a[i+1]){
+            return isSorted(a, i+1);
+        }
+        else{
+            return false;
+        }
+    }</code></pre></details></li></ul><ul id="196d7553-6a9f-4198-a736-230bea8e4662" class="toggle"><li><details open=""><summary>Return the index of a value in an array</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="41d1832f-4fc6-4978-98f6-73ff0900bdfa" class="code"><code class="language-Java">
+  static int indexOf(int[]a, int i, int target){
+        if (a[i] == target){
+            return i;
+        }
+        if (i==a.length-1 &amp;&amp; a[i] != target){
+            return -1;
+        }
+        return indexOf(a, i+1, target);
+    }</code></pre><p id="60d24ccb-95a4-49d4-8f60-9affdffa140c" class="">
+</p></details></li></ul><ul id="a53f8c45-99ee-4c4e-a971-617c4ec056cf" class="toggle"><li><details open=""><summary>Check if the value exists in an array</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d1a4018b-100f-4975-90aa-8b5c4669ec86" class="code"><code class="language-Java">private static boolean isArrayContainsValue(int[] array, int value) {
+        return isArrayContainsValueHelper(array, value, 0);
+    }
+
+    private static boolean isArrayContainsValueHelper(int[] array, int value, int index) {
+        // Base case: If the index is equal to the array length, the value was not found
+        if (index == array.length) {
+            return false;
+        }
+
+        // Check if the current element is equal to the desired value
+        if (array[index] == value) {
+            return true;
+        }
+
+        // Recursive case: Continue the search in the rest of the array
+        return isArrayContainsValueHelper(array, value, index + 1);
+    }</code></pre></details></li></ul><ul id="5e7d2c72-b79e-4bb6-baec-ab54220659e0" class="toggle"><li><details open=""><summary>Find all indexes of a certain value in an Array (Return Type: List)</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e51dca41-6d7a-4009-a962-10e30b2045ff" class="code"><code class="language-Java">static ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+  static void AllindexOf(int[]a, int i, int target){
+        if (a[i] == target){
+            list.add(i);
+        }
+        if (i==a.length-1 &amp;&amp; a[i] != target){
+            return;
+        }
+        AllindexOf(a, i+1, target);
+    }</code></pre><p id="ff8e4ed2-ac4f-4eb1-b6dd-3d2b7909b438" class="">Return Type: List</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4be373ec-8108-4bf1-ae42-053794928bfd" class="code"><code class="language-Java">static ArrayList AllIndexesOf(int[]a, int i, int target, ArrayList&lt;Integer&gt; list){
+
+        if (i == a.length-1){
+            return list;
+        }
+        if (a[i] == target){
+            list.add(i);
+        }
+        return AllIndexesOf(a, i+1, target, list);
+    }
+</code></pre><p id="e3e19a26-5825-46ab-9f4a-55511ab1ca9e" class="">w/o List Parameter</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3b85c04e-d2d3-4c8a-8f37-7a6ea0d13eaf" class="code"><code class="language-Java">static ArrayList&lt;Integer&gt; AllIndexesOf(int[]a, int i, int target){
+        ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        if (i == a.length-1){
+            return list;
+        }
+        if (a[i] == target){
+            list.add(i);
+        }
+        ArrayList&lt;Integer&gt; All_Lists = AllIndexesOf(a, i+1, target);
+        list.addAll(All_Lists);
+        return list;
+    }</code></pre></details></li></ul><ul id="e381b54d-87bd-4067-9e0d-c20885820f11" class="toggle"><li><details open=""><summary>Binary Search through an array</summary><p id="8a163f28-28f1-4ef7-b9b8-12a24d31482a" class="">Array must be sorted!!!!!</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="15906aa6-ff6f-4d80-8d57-6070b342db98" class="code"><code class="language-Java">static int BinarySearch (int[] arr, int low, int high, int target){
+        if(high&gt;=low){
+            int mid = (low + high) / 2;
+        if (arr[(mid)] == target){
+            return mid;
+        }
+        if (target &gt; arr[mid]){
+            return BinarySearch(arr, mid+1, high, target);
+        }
+        if (target &lt; arr[mid]){
+            return BinarySearch(arr, low, mid-1, target);
+        }
+        }
+        return -1;
+    }</code></pre><p id="7875e8d3-8aa6-409f-b9f6-70b644612950" class="">Finding first occurrence:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fb3fafcb-011c-458d-9e6e-5f8ad9a1fdcd" class="code"><code class="language-Java">private static int binarySearchRecursive(int[] array, int target, int left, int right) {
+
+        if (left&gt;right){
+            return -1;
+        }
+        int t = left+( right-left)/2;
+        if (array[t] &lt; target) return binarySearchRecursive(array, target,t+1, right);
+        int t0 = binarySearchRecursive(array, target, left, t-1);
+        if (t0 &gt;=0) return t0;
+        if (array[t] == target) return t;
+        else return -1;
+    }</code></pre></details></li></ul><ul id="e9b7462d-2fe1-4f2a-8d7a-401cdb08c74e" class="toggle"><li><details open=""><summary>Find index of largest element in an array</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3e90f248-a73d-4997-a846-87e1cb8b7914" class="code"><code class="language-Java">public static int findIndexOfLargest(int[] a, int toIncl) {
+        if (toIncl == 0){
+            return 0;
+        }
+        int Past_Index = findIndexOfLargest(a, toIncl-1);
+        if (a[toIncl] &gt; a[Past_Index]){
+                return toIncl;
+        }
+        else{
+            return Past_Index;
+        }
+    }</code></pre></details></li></ul><ul id="c2057fcc-6a4b-458a-9326-cb96e286cb61" class="toggle"><li><details open=""><summary>Find largest element in an array</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a7d20d50-b182-465f-8af0-54d91807410c" class="code"><code class="language-Java">public static int findLargest(int[] a, int toIncl){
+        if (toIncl == 0){
+            return a[toIncl];
+        }
+        else{
+            return Integer.max(a[toIncl], findIndexOfLargest(a, toIncl-1));
+        }
+
+    }</code></pre></details></li></ul><p id="424943ea-23f2-4cad-a95e-8568e8b18271" class="">
+</p></details></li></ul><ul id="d44299be-0732-4518-9204-8be942f63467" class="toggle"><li><details open=""><summary>Recursion - Trees</summary><p id="d412f81d-6d59-4525-9d3b-74327765025e" class="">In-Order</p><p id="6810f05f-652a-4979-a1b2-03ce280ba4f6" class="">Pre-Order</p><p id="28c5b5a2-d149-4dd3-92f6-1f949f899605" class="">
+</p></details></li></ul></details></li></ul><ul id="319f032d-f902-473b-8e64-a682e1d5d63b" class="toggle"><li><details open=""><summary>Classes &amp; Objects</summary><ul id="1c381a62-0af5-401b-be49-b8121748fba0" class="toggle"><li><details open=""><summary>Access Modifiers</summary><p id="745fca44-34fe-4a22-bbed-a80a59d7a31e" class="">There are four types of Java access modifiers:</p><ol type="1" id="46236f73-1e26-4682-bd4f-ffc70293d8fd" class="numbered-list" start="1"><li><strong>Private</strong>: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.</li></ol><ol type="1" id="4f39f8ba-e75f-4652-810a-9c6bc9399e67" class="numbered-list" start="2"><li><strong>Default</strong>: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.</li></ol><ol type="1" id="8b2ff2b2-9d61-4746-9f51-638a0a7d3d31" class="numbered-list" start="3"><li><strong>Protected</strong>: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.</li></ol><ol type="1" id="62868da9-ddfa-45a9-9ff4-20d4b97388f6" class="numbered-list" start="4"><li><strong>Public</strong>: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.</li></ol></details></li></ul><ul id="2626463c-4800-414e-a1ae-ca81be976c5b" class="toggle"><li><details open=""><summary>Final Keyword</summary><p id="4d10bbff-7c12-45f5-b2f2-83eef5ce0489" class="">In Java, the <code>final</code> keyword can be applied to classes, methods, and variables, and its meaning varies depending on where it is used.</p><ol type="1" id="dd75d338-9909-455d-8112-8f92a472f82d" class="numbered-list" start="1"><li><strong>Final Classes:</strong><ul id="a4dad951-5c2e-4a78-87d6-94cf25fd9fa0" class="bulleted-list"><li style="list-style-type:disc">When applied to a class, the <code>final</code> keyword indicates that the class cannot be subclassed. In other words, it prevents other classes from inheriting from it.</li></ul><ul id="a1f52b8b-090f-41d4-a703-2e87df2c96ca" class="bulleted-list"><li style="list-style-type:disc">Example:<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="664bfdbc-d8a7-4e2e-98ea-107e936533eb" class="code code-wrap"><code class="language-Java">final class FinalClass {
+    // Class members and methods
+}
+</code></pre></li></ul></li></ol><ol type="1" id="72555ccb-f595-483b-aa10-2bca2bd67663" class="numbered-list" start="2"><li><strong>Final Methods:</strong><ul id="ba32ffa8-8b12-4a1b-9a40-4f01257a29a9" class="bulleted-list"><li style="list-style-type:disc">When applied to a method, the <code>final</code> keyword indicates that the method cannot be overridden by subclasses. Subclasses are not allowed to provide a different implementation for a <code>final</code> method.</li></ul><ul id="392b99d5-30ec-43f1-926b-10fb669aa526" class="bulleted-list"><li style="list-style-type:disc">Example:<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f992ad5f-5afc-47b6-9678-cfaea2997ff1" class="code code-wrap"><code class="language-Java">class Parent {
+    final void finalMethod() {
+        // Method implementation
+    }
+}
+
+class Child extends Parent {
+    // Compilation error: Cannot override final method from Parent
+    // void finalMethod() { }
+}
+</code></pre></li></ul></li></ol><ol type="1" id="036c5b87-f642-40fa-bedb-645dbab75ab6" class="numbered-list" start="3"><li><strong>Final Variables (Fields):</strong><ul id="91e4f363-3d62-4976-aa38-253fb910de51" class="bulleted-list"><li style="list-style-type:disc">When applied to a variable (field), the <code>final</code> keyword indicates that the variable&#x27;s value cannot be changed after it has been initialized. Once assigned, a <code>final</code> variable becomes a constant and cannot be reassigned.</li></ul><ul id="53211c67-fb53-475f-baea-1e5604e13bf9" class="bulleted-list"><li style="list-style-type:disc">Example:<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2b536a47-e870-4dc7-a16a-03f5f9345bd6" class="code code-wrap"><code class="language-Java">class MyClass {
+    final int myConstant = 10;
+
+    void modifyConstant() {
+        // Compilation error: Cannot assign a value to final variable &#x27;myConstant&#x27;
+        // myConstant = 20;
+    }
+}
+</code></pre></li></ul></li></ol><p id="7dc1f3e2-22c3-47c8-be7e-821c5858b6b2" class="">In summary:</p><ul id="8b18bc3c-b4db-49ce-b0e4-d0bddcb713bb" class="bulleted-list"><li style="list-style-type:disc">For classes, <code>final</code> prevents inheritance (sub-classing).</li></ul><ul id="5905e894-714a-4220-917e-43a2de9da0c7" class="bulleted-list"><li style="list-style-type:disc">For methods, <code>final</code> prevents overriding in subclasses.</li></ul><ul id="04fb40a0-e4fd-47ca-a9e7-9b5957329d04" class="bulleted-list"><li style="list-style-type:disc">For variables (fields), <code>final</code> makes the variable a constant, and its value cannot be changed after initialization.</li></ul><p id="bdd462c5-27a4-48dd-bd9b-cd9ffc361397" class="">Using <code>final</code> appropriately can lead to more robust and maintainable code by enforcing constraints that help prevent unintended modifications or extensions in the codebase.</p></details></li></ul><ul id="87b7feb8-f63e-492d-b0dc-e0341218df33" class="toggle"><li><details open=""><summary>Real Life use of Downcasting</summary><p id="fb80a1b7-d5a4-4d54-86ed-cb41782ab5f4" class="">Consider a real-life scenario where downcasting can be useful: a system managing different types of employees in a company.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7cb3b196-9d7b-4be7-ac70-9abcec8c6939" class="code code-wrap"><code class="language-Java">class Employee {
+    String name;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public void work() {
+        System.out.println(&quot;Performing general tasks.&quot;);
+    }
+}
+
+class Developer extends Employee {
+    String programmingLanguage;
+
+    public Developer(String name, String programmingLanguage) {
+        super(name);
+        this.programmingLanguage = programmingLanguage;
+    }
+
+    @Override
+    public void work() {
+        System.out.println(&quot;Writing code in &quot; + programmingLanguage);
+    }
+
+    public void codeReview() {
+        System.out.println(&quot;Conducting code review.&quot;);
+    }
+}
+
+class Manager extends Employee {
+    public Manager(String name) {
+        super(name);
+    }
+
+    @Override
+    public void work() {
+        System.out.println(&quot;Managing team and projects.&quot;);
+    }
+
+    public void conductMeeting() {
+        System.out.println(&quot;Conducting a team meeting.&quot;);
+    }
+}
+</code></pre><p id="6010f077-c8e2-427b-bd69-5a837f227b16" class="">In this example, we have a hierarchy of employees, where <code>Developer</code> and <code>Manager</code> are subclasses of the general <code>Employee</code> class.</p><p id="81288020-1c51-469d-9a09-705880470990" class="">Now, let&#x27;s create a method that works with an array of employees and performs different actions based on their types:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b7369dd4-3f3e-4b19-8df8-89d4c7751947" class="code code-wrap"><code class="language-Java">public class Company {
+    public static void main(String[] args) {
+        Employee[] employees = new Employee[3];
+        employees[0] = new Developer(&quot;Alice&quot;, &quot;Java&quot;);
+        employees[1] = new Manager(&quot;Bob&quot;);
+        employees[2] = new Developer(&quot;Charlie&quot;, &quot;Python&quot;);
+
+        for (Employee employee : employees) {
+            employee.work();
+
+            // Downcast to access specific methods based on the type
+            if (employee instanceof Developer) {
+                Developer developer = (Developer) employee;
+                developer.codeReview();
+            } else if (employee instanceof Manager) {
+                Manager manager = (Manager) employee;
+                manager.conductMeeting();
+            }
+        }
+    }
+}
+</code></pre><p id="48f343fe-f3bc-4adc-8427-e6fe473b7732" class="">In this scenario, the <code>work</code> method is overridden in both <code>Developer</code> and <code>Manager</code> classes to provide specialized behavior. During the iteration over the array of employees, we downcast each <code>Employee</code> to its specific type using <code>instanceof</code> to access methods or properties unique to that type.</p><p id="66ea6569-1fd1-4c5b-a750-130a99b806ba" class="">This reflects a situation where you have a generic way of handling employees, but sometimes you need to access specialized functionalities specific to certain types of employees.</p></details></li></ul><p id="09396758-2e71-4f32-95fe-6ed448961783" class="">
+</p></details></li></ul><p id="32e75574-1903-44a2-9101-b514672cbad8" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
